@@ -22,18 +22,18 @@ const LoginForm = ({navigation}) => {
            console.log(re.message + "hi");
            Alert.alert(
                "You entered the email or password wrongly",
-               "If you not registered click register",
-           [{ text: "Register", onPress: () => navigation.push("SignupScreen") },
+               "If you not sign up yet click Sign Up",
+           [{ text: "Sign Up", onPress: () => navigation.push("SignupScreen") },
                {text: "Try again" }
            ])
     })
 
-        //  try{
+        /*/  try{
         //     await firebase.auth().signInWithEmailAndPassword(email,password)
         //     console.log('firebase success',email,password)
         //  }catch(error){
         //      Alert.alert(error.message)
-        //  }
+        /*/  }
      }
 
     return (
@@ -109,7 +109,7 @@ const LoginForm = ({navigation}) => {
                 style={styles.button(isValid)} 
                 onPress={handleSubmit} disabled={!isValid}
             > 
-                
+                <Text>Log in</Text>
             </Pressable>
 
 

@@ -17,7 +17,7 @@ const SignupForm = ({navigation}) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((re) => {
                 console.log(re);
-                navigation.push("HomeScreen");
+                navigation.goBack();
             })
             .catch((re) => {
                 console.log(re );
@@ -128,7 +128,7 @@ const SignupForm = ({navigation}) => {
 
             <View style={{flexDirection:'row', justifyContent:'flex-end', marginTop:5}}>
                     <Text style={{color:'black', fontSize:15}}>Do you already have an account</Text>
-                <TouchableOpacity onPress={()=>navigation.goBack('loginScreen')}>
+                <TouchableOpacity onPress={()=>navigation.push('LoginScreen')}>
                     <Text style={{color:'#1E90FF', fontSize:15}}> LogIn</Text>
                 </TouchableOpacity>
             </View>
