@@ -124,7 +124,7 @@ const LoginForm = ({navigation}) => {
             </Formik>
         </View>
     )
-}
+
 
 const styles=StyleSheet.create({
     wrapper:{
